@@ -48,10 +48,10 @@ const checkDaysOfWeek = (
   if (
     options.useNthWeekdayOfMonth &&
     cronData.daysOfWeek.indexOf('#') !== -1 &&
-    cronData.daysOfWeek.match(/[,/-]/)
+    cronData.daysOfWeek.match(/[/-]/)
   ) {
     return err([
-      `Cannot specify Nth weekday of month with lists, steps or ranges (symbols ,-/).`,
+      `Cannot specify Nth weekday of month with lists, steps or ranges (symbols -/).`,
     ])
   }
 
